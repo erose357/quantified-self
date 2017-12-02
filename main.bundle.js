@@ -48,6 +48,10 @@
 
 	__webpack_require__(1);
 	__webpack_require__(5);
+	__webpack_require__(8);
+	__webpack_require__(9);
+	__webpack_require__(7);
+	__webpack_require__(10);
 
 /***/ }),
 /* 1 */
@@ -84,7 +88,7 @@
 
 
 	// module
-	exports.push([module.id, "table, th, td {\n  border: 1px solid black;\n  border-collapse: collapse;\n}\nbutton {\n  background-color: red;\n  border-radius: 75%;\n  color: white;\n  font-size: 15px;\n}\n", ""]);
+	exports.push([module.id, "table, th, td {\n  border: 1px solid black;\n  border-collapse: collapse;\n}\nbutton {\n  background-color: red;\n  border-radius: 75%;\n  color: white;\n  font-size: 15px;\n}\n\n.food-button {\n  background-color: DodgerBlue;\n  border-radius: 10px;\n  margin-left: 10%;\n}\n\n.food-labels {\n\n}\n\n.food-placeholders {\n  color: red;\n  margin-left: 5%;\n  display: none;\n}\n", ""]);
 
 	// exports
 
@@ -404,24 +408,16 @@
 	'use strict';
 
 	var $ = __webpack_require__(6);
+	var requests = __webpack_require__(7);
 	var API = 'https://api-qs.herokuapp.com';
 
-	$(document).ready(function () {
-	  var getFoods = function getFoods() {
-	    return $.ajax({
-	      url: API + '/api/v1/foods',
-	      method: 'GET'
-	    }).done(function (data) {
-	      for (var i = 0; i < data.length; i++) {
-	        $('.foods-table').append('<tr><td>' + data[i].name + '</td><td>' + data[i].calories + '</td><td><button>-</button></td></tr>');
-	      }
-	    }).fail(function (error) {
-	      console.error(error);
-	    });
-	  };
+	function getFoods() {
+	  return $.get("https://api-qs.herokuapp.com/api/v1/foods").done(function (data) {
+	    requests.appendFoods(data);
+	  }).catch(requests.errorLog);
+	}
 
-	  getFoods();
-	});
+	module.exports = { getFoods: getFoods };
 
 /***/ }),
 /* 6 */
@@ -10681,6 +10677,99 @@
 	return jQuery;
 	} );
 
+
+/***/ }),
+/* 7 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var $ = __webpack_require__(6);
+
+	function appendFoods(data) {
+	  for (var i = 0; i < data.length; i++) {
+	    $('.headings').after('<tr class="food' + data[i].id + '"><td>' + data[i].name + '</td><td>' + data[i].calories + '</td><td><button class="delete-food ' + data[i].id + '">-</button></td></tr>');
+	  }
+	}
+
+	function errorLog(error) {
+	  console.error(error);
+	}
+
+	module.exports = { appendFoods: appendFoods, errorLog: errorLog };
+
+/***/ }),
+/* 8 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var $ = __webpack_require__(6);
+	var requests = __webpack_require__(7);
+
+	function deleteFood() {
+	  var foodId = getId(this);
+	  return $.ajax({
+	    url: 'https://api-qs.herokuapp.com/api/v1/foods/' + foodId,
+	    method: 'DELETE'
+	  }).then(function () {
+	    $('.food' + foodId).remove();
+	  }).catch(requests.errorLog);
+	}
+
+	function getId(id) {
+	  return id.className.split(' ')[1];
+	}
+
+	module.exports = { deleteFood: deleteFood };
+
+/***/ }),
+/* 9 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var $ = __webpack_require__(6);
+	var API = 'https://api-qs.herokuapp.com';
+
+	function createNewFood() {
+	  var postName = $(".new-food-form input[name='food-name']").val();
+	  var postCalories = $(".new-food-form input[name='food-calories']").val();
+	  return $.ajax({
+	    url: API + '/api/v1/foods',
+	    method: 'POST',
+	    data: { food: { name: postName, calories: postCalories } }
+	  });
+	}
+	module.exports = { createNewFood: createNewFood };
+
+/***/ }),
+/* 10 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var $ = __webpack_require__(6);
+	var allFoods = __webpack_require__(5);
+	var createNewFood = __webpack_require__(9);
+	var deleteFood = __webpack_require__(8);
+
+	$(document).ready(function () {
+	  $('window').on('load', allFoods.getFoods());
+
+	  $('.foods-table').on('click', '.delete-food', deleteFood.deleteFood);
+
+	  $('.new-food-form input[type="submit"]').on('click', function () {
+	    var postName = $('.new-food-form input[name=food-name]').val();
+	    var postCalories = $('.new-food-form input[name=food-calories').val();
+	    if (postName.length === 0 || postCalories.length === 0) {
+	      event.preventDefault();
+	      $('.food-placeholders').toggle();
+	    } else {
+	      createNewFood.createNewFood();
+	    }
+	  });
+	});
 
 /***/ })
 /******/ ]);

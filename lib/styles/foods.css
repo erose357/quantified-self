@@ -18,6 +18,7 @@ button {
 .food-placeholders {
   color: red;
   margin-left: 5%;
+  display: none;
 }
 
 .error {
