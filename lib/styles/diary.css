@@ -1,12 +1,68 @@
-table, th, td {
-  border: 1px solid black;
+* {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+h3 {
+  margin: 10px 0;
+  text-align: left;
+}
+
+table {
+  border: none; 
   border-collapse: collapse;
+  display: block;
+  font-family: sans-serif;
+  font-size: 75%;
+  overflow: auto;
+  width: auto;
 }
 
-.diary-heading {
-  background-color: #c5c4c4;
+th {
+  background-color: DodgerBlue;
+  border: none;
+  color: white;
+  font-weight: 100;
+  padding: 10px 15px;
 }
 
-.headings-diary {
-  background-color: #c5c4c4;
+th.blank {
+  background-color: white;
+}
+
+th.name {
+  text-align: left;
+}
+
+th.calories {
+  text-align: right;
+}
+
+td {
+  background-color: #ecf0f1;
+  border: .5px solid white; 
+  padding: 10px 15px;
+}
+
+td.name {
+  text-align: left;
+}
+
+td.calories {
+  text-align: right;
+  margin-right: none;
+}
+
+td.delete-button {
+  background-color: white;
+  padding: 0px;
+}
+
+button.delete-food {
+  border: none;
+}
+
+.material-icons.gray {
+  color: #FF0000;
 }

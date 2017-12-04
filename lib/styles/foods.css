@@ -3,12 +3,6 @@ table, th, td {
   border-collapse: collapse;
 }
 
-button {
-  background-color: red;
-  border-radius: 75%;
-  color: white;
-  font-size: 15px;
-}
 
 .food-button {
   background-color: DodgerBlue;

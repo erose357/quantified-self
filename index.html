@@ -2,91 +2,96 @@
 <html>
 <head>
   <meta charset="utf-8">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <title>Quantified Self - Diary</title>
 </head>
 <body class="diary">
 
   <h3>Main Diary</h3>
 
-  <article>
-    <h3>Breakfast</h3>
-    <table class="breakfast-table">
-      <tr class="diary-heading breakfast-heading">
-        <th>Name</th>
-        <th>Calories</th>
-      </tr>
-      <tr class="diary-heading">
-        <th>Total Calories</th>
-        <th>0</th>
-      </tr>
-      <tr class="diary-heading">
-        <th>Remaining Calories</th>
-        <th>400</th>
-      </tr>
-    </table>
-  </article>
-
-  <article>
-    <h3>Lunch</h3>
-    <table class="lunch-table">
-      <tr class="diary-heading lunch-heading">
-        <th>Name</th>
-        <th>Calories</th>
-      </tr>
-      <tr class="diary-heading">
-        <th>Total Calories</th>
-        <th>0</th>
-      </tr>
-      <tr class="diary-heading">
-        <th>Remaining Calories</th>
-        <th>600</th>
-      </tr>
-    </table>
-  </article>
-
-  <article>
-    <h3>Dinner</h3>
-    <table class="dinner-table">
-      <tr class="diary-heading dinner-heading">
-        <th>Name</th>
-        <th>Calories</th>
-      </tr>
-      <tr class="diary-heading">
-        <th>Total Calories</th>
-        <th>0</th>
-      </tr>
-      <tr class="diary-heading">
-        <th>Remaining Calories</th>
-        <th>600</th>
-      </tr>
-    </table>
-  </article>
-
-  <article>
-    <h3>Snacks</h3>
-    <table class="dinner-table">
-      <tr class="diary-heading snack-heading">
-        <th>Name</th>
-        <th>Calories</th>
-      </tr>
-      <tr class="diary-heading">
-        <th>Total Calories</th>
-        <th>0</th>
-      </tr>
-      <tr class="diary-heading">
-        <th>Remaining Calories</th>
-        <th>200</th>
-      </tr>
-    </table>
-  </article>
-
-  <h3>Foods</h3>
   <div>
+    <article class="breakfast">
+      <h3>Breakfast</h3>
+      <table class="breakfast-table">
+        <tr class="diary-heading breakfast-heading">
+          <th class="name">Name</th>
+          <th class="calories">Calories</th>
+        </tr>
+        <tr class="diary-heading">
+          <th class="name">Total Calories</th>
+          <th class="calories">0</th>
+        </tr>
+        <tr class="diary-heading">
+          <th class="name">Remaining Calories</th>
+          <th class="calories">400</th>
+        </tr>
+      </table>
+    </article>
+
+    <article class="lunch">
+      <h3>Lunch</h3>
+      <table class="lunch-table">
+        <tr class="diary-heading lunch-heading">
+          <th class="name">Name</th>
+          <th class="calories">Calories</th>
+        </tr>
+        <tr class="diary-heading">
+          <th class="name">Total Calories</th>
+          <th class="calories">0</th>
+        </tr>
+        <tr class="diary-heading">
+          <th>Remaining Calories</th>
+          <th class="calories">600</th>
+        </tr>
+      </table>
+    </article>
+  </div>
+
+  <div>
+    <article class="dinner">
+      <h3>Dinner</h3>
+      <table class="dinner-table">
+        <tr class="diary-heading dinner-heading">
+          <th class="name">Name</th>
+          <th class="calories">Calories</th>
+        </tr>
+        <tr class="diary-heading">
+          <th class="name">Total Calories</th>
+          <th class="calories">0</th>
+        </tr>
+        <tr class="diary-heading">
+          <th class="name">Remaining Calories</th>
+          <th class="calories">600</th>
+        </tr>
+      </table>
+    </article>
+
+    <article class="snack">
+      <h3>Snacks</h3>
+      <table class="dinner-table">
+        <tr class="diary-heading snack-heading">
+          <th class="name">Name</th>
+          <th class="calories">Calories</th>
+        </tr>
+        <tr class="diary-heading">
+          <th>Total Calories</th>
+          <th class="calories">0</th>
+        </tr>
+        <tr class="diary-heading">
+          <th class="name">Remaining Calories</th>
+          <th class="calories">200</th>
+        </tr>
+      </table>
+    </article>
+  </div>
+
+  <div>
+  <h3>Foods</h3>
     <table class="diary-foods-table">
       <tr class="headings-diary">
-        <th></th>
-        <th>Name</th>
-        <th>Calories</th>
+        <th class="blank"></th>
+        <th class="name">Name</th>
+        <th class="calories">Calories</th>
       </tr>
     </table>
   </div>
