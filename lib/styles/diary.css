@@ -83,3 +83,21 @@ button.delete-food {
 .material-icons.gray {
   color: #FF0000;
 }
+
+a.new-food-button {
+  background-color: DodgerBlue;
+  border: 1px solid black;
+  border-radius: 15px;
+  color: black;
+  display: inline-block;
+  font-size: 11px;
+  font-family: sans-serif;
+  font-weight: bold;
+  margin-bottom: 10px;
+  padding: 5px 20px;
+  text-decoration: none;
+}
+
+.diary-food-search {
+  margin: 20px;
+}

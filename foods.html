@@ -1,19 +1,19 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <title>Quantified Self - Manage Foods</title>
 </head>
-<body class="foods">
-  <h3>Manage Foods</h3>
+<body class="foods" id="foods-main">
+  <h3 tabindex="0">Manage Foods</h3>
   <div>
     <form class="new-food-form">
-      <span class="food-labels">Name</span><br>
-      <input type="text" name="food-name" size="40" class="food-form"><br>
-      <span class="error" id="msg1">Please add a name</span><br>
-      <span class="food-labels">Calories</span><br>
-      <input type="text" name="food-calories" size="40" class="food-form"><br>
-      <span class="error" id="msg2">Please add a calorie amount</span><br>
+      <span tabindex="0" class="food-labels">Name</span><br>
+      <input type="text" name="food-name" size="40" class="food-form" aria-labelledby="foods-main"><br>
+      <span tabindex="0" class="error" id="msg1">Please add a name</span><br>
+      <span tabindex="0" class="food-labels">Calories</span><br>
+      <input type="text" name="food-calories" size="40" class="food-form" aria-labelledby="foods-main"><br>
+      <span tabindex="0" class="error" id="msg2">Please add a calorie amount</span><br>
       <input type="submit" value="     Add Food     " class="food-button">
     </form>
   </div>
@@ -24,16 +24,16 @@
 
   <div class="food-search">
     <form>
-      <span class="food-labels">Filter by Name</span><br>
-      <input type="text" name="food-name" size="40" id="food-input">
+      <span tabindex="0" class="food-labels">Filter by Name</span><br>
+      <input type="text" name="food-name" size="40" id="food-input" aria-label="foods-search">
     </form>
   </div>
 
   <div>
     <table class="foods-table" id="foods-table">
       <tr class="headings diary-heading">
-        <th>Name</th>
-        <th>Calories</th>
+        <th tabindex="0">Name</th>
+        <th tabindex="0">Calories</th>
       </tr>
     </table>
   </div>

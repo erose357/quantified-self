@@ -3,12 +3,23 @@ table, th, td {
   border-collapse: collapse;
 }
 
+button {
+  background-color: red;
+  border-radius: 75%;
+  color: black;
+  font-size: 15px;
+}
 
 .food-button {
   background-color: DodgerBlue;
+  border: 1px solid black;
   border-radius: 15px;
+  color: black;
+  font-family: sans-serif;
+  font-size: 11px;
+  font-weight: bold;
   margin-left: 10%;
-  padding: 5px;
+  padding: 5px 20px;
 }
 
 .error {
@@ -27,4 +38,12 @@ div.food-search {
 }
 .delete-button {
   border: none;
+}
+
+#msg1 {
+  display: none;
+}
+
+#msg2 {
+  display: none;
 }
