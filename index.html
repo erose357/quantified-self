@@ -3,122 +3,127 @@
 <head>
   <meta charset="utf-8">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="http://fonts.googleapis.com/css?family=Oswald:700|Droid+Serif:400,700italic" rel="stylesheet" type="text/css" />
   <title>Quantified Self - Diary</title>
 </head>
 <body class="diary">
   <h3 tabindex="0">Main Diary</h3>
-  <article>
-    <h3 tabindex="0">Breakfast</h3>
-    <table id="breakfast-table">
-      <tr class="diary-heading Breakfast">
-        <th tabindex="0">Name</th>
-        <th tabindex="0">Calories</th>
-      </tr>
-      <tr class="diary-heading">
-        <th tabindex="0">Total Calories</th>
-        <th tabindex="0" id="breakfast-total-cal" class="total-cals"></th>
-      </tr>
-      <tr class="diary-heading">
-        <th tabindex="0">Remaining Calories</th>
-        <th id="breakfast-remaining-cal" tabindex="0"></th>
-      </tr>
-    </table>
-  </article>
+  <div class="wrapper">
+    <article class="box">
+      <h3 tabindex="0">Breakfast</h3>
+      <table id="breakfast-table">
+        <tr class="diary-heading Breakfast">
+          <th tabindex="0">Name</th>
+          <th tabindex="0">Calories</th>
+        </tr>
+        <tr class="diary-heading">
+          <th tabindex="0">Total Calories</th>
+          <th tabindex="0" id="breakfast-total-cal" class="total-cals"></th>
+        </tr>
+        <tr class="diary-heading">
+          <th tabindex="0">Remaining Calories</th>
+          <th id="breakfast-remaining-cal" tabindex="0"></th>
+        </tr>
+      </table>
+    </article>
 
-  <article>
-    <h3 tabindex="0">Lunch</h3>
-    <table id="lunch-table">
-      <tr class="diary-heading Lunch">
-        <th tabindex="0">Name</th>
-        <th tabindex="0">Calories</th>
-      </tr>
-      <tr class="diary-heading">
-        <th tabindex="0">Total Calories</th>
-        <th tabindex="0" id="lunch-total-cal" class="total-cals"></th>
-      </tr>
-      <tr class="diary-heading">
-        <th tabindex="0">Remaining Calories</th>
-        <th tabindex="0" id="lunch-remaining-cal"></th>
-      </tr>
-    </table>
-  </article>
+    <article class="box">
+      <h3 tabindex="0">Lunch</h3>
+      <table id="lunch-table">
+        <tr class="diary-heading Lunch">
+          <th tabindex="0">Name</th>
+          <th tabindex="0">Calories</th>
+        </tr>
+        <tr class="diary-heading">
+          <th tabindex="0">Total Calories</th>
+          <th tabindex="0" id="lunch-total-cal" class="total-cals"></th>
+        </tr>
+        <tr class="diary-heading">
+          <th tabindex="0">Remaining Calories</th>
+          <th tabindex="0" id="lunch-remaining-cal"></th>
+        </tr>
+      </table>
+    </article>
 
-  <article>
-    <h3 tabindex="0">Dinner</h3>
-    <table id="dinner-table">
-      <tr class="diary-heading Dinner">
-        <th tabindex="0">Name</th>
-        <th tabindex="0">Calories</th>
-      </tr>
-      <tr class="diary-heading">
-        <th tabindex="0">Total Calories</th>
-        <th tabindex="0" id="dinner-total-cal" class="total-cals"></th>
-      </tr>
-      <tr class="diary-heading">
-        <th tabindex="0">Remaining Calories</th>
-        <th tabindex="0" id="dinner-remaining-cal"></th>
-      </tr>
-    </table>
-  </article>
+    <article class="box">
+      <h3 tabindex="0">Dinner</h3>
+      <table id="dinner-table">
+        <tr class="diary-heading Dinner">
+          <th tabindex="0">Name</th>
+          <th tabindex="0">Calories</th>
+        </tr>
+        <tr class="diary-heading">
+          <th tabindex="0">Total Calories</th>
+          <th tabindex="0" id="dinner-total-cal" class="total-cals"></th>
+        </tr>
+        <tr class="diary-heading">
+          <th tabindex="0">Remaining Calories</th>
+          <th tabindex="0" id="dinner-remaining-cal"></th>
+        </tr>
+      </table>
+    </article>
 
-  <article>
-    <h3 tabindex="0">Snacks</h3>
-    <table id="snack-table">
-      <tr class="diary-heading Snack">
-        <th tabindex="0">Name</th>
-        <th tabindex="0">Calories</th>
-      </tr>
-      <tr class="diary-heading">
-        <th tabindex="0">Total Calories</th>
-        <th tabindex="0" id="snack-total-cal" class="total-cals"></th>
-      </tr>
-      <tr class="diary-heading">
-        <th tabindex="0">Remaining Calories</th>
-        <th tabindex="0" id="snack-remaining-cal"></th>
-      </tr>
-    </table>
-  </article>
+    <article class="box">
+      <h3 tabindex="0">Snacks</h3>
+      <table id="snack-table">
+        <tr class="diary-heading Snack">
+          <th tabindex="0">Name</th>
+          <th tabindex="0">Calories</th>
+        </tr>
+        <tr class="diary-heading">
+          <th tabindex="0">Total Calories</th>
+          <th tabindex="0" id="snack-total-cal" class="total-cals"></th>
+        </tr>
+        <tr class="diary-heading">
+          <th tabindex="0">Remaining Calories</th>
+          <th tabindex="0" id="snack-remaining-cal"></th>
+        </tr>
+      </table>
+    </article>
 
-  <article>
-    <h3 tabindex="0">Totals</h3>
-    <table id="totals-table">
-      <tr class="diary-heading totals-heading">
-        <th tabindex="0">Goal Calories</th>
-        <th tabindex="0">2000</th>
-      </tr>
-      <tr class="diary-heading">
-        <th tabindex="0">Calories Consumed</th>
-        <th tabindex="0" id="totals-total-cal"></th>
-      </tr>
-      <tr class="diary-heading">
-        <th tabindex="0">Remaining Calories</th>
-        <th tabindex="0" id="totals-remaining-cal"></th>
-      </tr>
-    </table>
-  </article>
+    <div class="box">
+      <h3 tabindex="0" id="foods-table">Foods</h3>
+      <a href="foods.html" class="new-food-button">Create New</a>
+      <div class="food-buttons">
+        <p>Add Selected To</p>
+        <button class="food-button breakfast">Breakfast</button>
+        <button class="food-button lunch">Lunch</button>
+        <button class="food-button dinner">Dinner</button>
+        <button class="food-button snack">Snack</button>
+      </div>
+      <div class="diary-food-search">
+        <form>
+          <span tabindex="0" class="food-labels"><label for="diary-food-input">Search by Name</label></span><br>
+          <input type="text" name="food-name" size="40" id="diary-food-input">
+        </form>
+      </div>
+      <table class="diary foods-table" id="diary-foods-table">
+        <tr class="headings-diary">
+          <th></th>
+          <th tabindex="0">Name</th>
+          <th tabindex="0"id="calorie-filter">Calories</th>
+        </tr>
+      </table>
+    </div>
 
-  <h3 tabindex="0" id="foods-table">Foods</h3>
-  <a href="foods.html" class="new-food-button">Create New</a>
-  <p>Add Selected To</p>
-  <button class="food-button breakfast">Breakfast</button>
-  <button class="food-button lunch">Lunch</button>
-  <button class="food-button dinner">Dinner</button>
-  <button class="food-button snack">Snack</button>
-  <div class="diary-food-search">
-    <form>
-      <span tabindex="0" class="food-labels"><label for="diary-food-input">Search by Name</label></span><br>
-      <input type="text" name="food-name" size="40" id="diary-food-input">
-    </form>
-  </div>
+    <article class="box">
+      <h3 tabindex="0">Totals</h3>
+      <table id="totals-table">
+        <tr class="diary-heading totals-heading">
+          <th tabindex="0">Goal Calories</th>
+          <th tabindex="0">2000</th>
+        </tr>
+        <tr class="diary-heading">
+          <th tabindex="0">Calories Consumed</th>
+          <th tabindex="0" id="totals-total-cal"></th>
+        </tr>
+        <tr class="diary-heading">
+          <th tabindex="0">Remaining Calories</th>
+          <th tabindex="0" id="totals-remaining-cal"></th>
+        </tr>
+      </table>
+    </article>
 
-  <div>
-    <table class="diary foods-table" id="diary-foods-table">
-      <tr class="headings-diary">
-        <th></th>
-        <th tabindex="0">Name</th>
-        <th tabindex="0"id="calorie-filter">Calories</th>
-      </tr>
-    </table>
   </div>
   <script src="main.bundle.js"></script>
 </body>

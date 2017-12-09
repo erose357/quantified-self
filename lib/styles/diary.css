@@ -9,6 +9,10 @@ body {
   margin: 40px;
 }
 
+p {
+  font-family: 'Droid Serif';
+}
+
 .wrapper {
   display: grid;
   grid-template-columns: 500px 500px;
@@ -21,6 +25,7 @@ body {
 }
 
 h3 {
+  font-family: 'Oswald';
   margin: 10px 0;
   text-align: left;
 }
@@ -80,6 +85,12 @@ button.delete-food {
   border: none;
 }
 
+button.food-button {
+  display: inline-block;
+  width: 100px;
+  margin: 2% 7.5%;
+}
+
 .material-icons.gray {
   color: #FF0000;
 }
@@ -93,11 +104,20 @@ a.new-food-button {
   font-size: 11px;
   font-family: sans-serif;
   font-weight: bold;
-  margin-bottom: 10px;
+  margin: 15px 50px 10px 50px;
   padding: 5px 20px;
   text-decoration: none;
 }
 
 .diary-food-search {
-  margin: 20px;
+  margin: 10px 20px;
+  padding: 0px 30px;
+}
+
+div.food-buttons {
+  padding: 0 20px;
+}
+
+div.food-buttons p {
+  padding: 5px 35px;
 }
